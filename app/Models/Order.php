@@ -13,4 +13,18 @@ class Order extends Model
     {
         return $this->belongsTo(Members::class);
     }
+
+    public function sporting_item()
+    {
+        return $this->belongsTo(SportingItem::class, 'sporting_item_id');
+    }
+
+    public function scopeFilter($query, array $filters)
+    {
+        if ($filters['search'] ?? false) {
+
+            $query->where('product_name', 'like', '%' . request('search') . '%')
+                ->orWhere('quantity', 'like', '%' . intval(request('search')) . '%');
+        }
+    }
 }

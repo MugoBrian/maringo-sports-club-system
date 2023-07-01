@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('stock_items', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('sporting_items_id');
-            $table->foreign('sporting_items_id')->references('id')->on('sporting_items')->onDelete('cascade');
+            $table->foreign('sporting_items_id')->references('id')->on('sporting_items')->onDelete('set null');
             $table->integer('quantity');
+            $table->unique('sporting_items_id');
             $table->timestamps();
         });
     }

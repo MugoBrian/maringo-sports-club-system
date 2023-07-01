@@ -90,11 +90,11 @@ Route::group(
             ],
             function () {
                 Route::get('/', [StockItemController::class, 'index'])->name('store.stockitems.index');
-                Route::get('/register', [StockItemController::class, 'create'])->name('store.stockitems.create');
+                Route::get('/create', [StockItemController::class, 'create'])->name('store.stockitems.create');
                 Route::post('', [StockItemController::class, 'store'])->name('store.stockitems.store');
-                Route::get('/{sportingitem}/edit', [StockItemController::class, 'edit'])->name('store.stockitems.edit');
-                Route::put('/{sportingitem}/update', [StockItemController::class, 'update'])->name('store.stockitems.update');
-                Route::delete('/{sportingitem}/delete', [StockItemController::class, 'destroy'])->name('members.destroy');
+                Route::get('/{stockItem}/edit', [StockItemController::class, 'edit'])->name('store.stockitems.edit');
+                Route::put('/{stockItem}/update', [StockItemController::class, 'update'])->name('store.stockitems.update');
+                Route::delete('/{stockItem}/delete', [StockItemController::class, 'destroy'])->name('members.destroy');
             },
         );
         Route::group(
@@ -104,7 +104,7 @@ Route::group(
             ],
             function () {
                 Route::get('/', [OrdersController::class, 'index'])->name('store.stockitems.index');
-                Route::get('/register', [OrdersItemController::class, 'create'])->name('store.stockitems.create');
+                Route::get('/create', [OrdersItemController::class, 'create'])->name('store.stockitems.create');
                 Route::post('', [OrdersController::class, 'store'])->name('store.stockitems.store');
                 Route::get('/{order}/edit', [OrdersController::class, 'edit'])->name('store.stockitems.edit');
                 Route::put('/{order}/update', [OrdersController::class, 'update'])->name('store.stockitems.update');

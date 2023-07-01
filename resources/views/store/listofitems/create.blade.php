@@ -23,7 +23,7 @@
                 </div>
                 <div class="mb-6 ">
                     <input type="number" min="100" class="border border-gray-200 rounded p-2 w-full" name="amount"
-                        value="{{ old('company') }}" placeholder="Amount" required/>
+                        value="{{ old('amount') }}" placeholder="Amount" required/>
                     @error('amount')
                         <p class="text-red-500 text-xs mt-1">
                             {{ $message }}

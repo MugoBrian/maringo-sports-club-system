@@ -21,14 +21,10 @@
                     @foreach ($sportItems as $sportItem)
                         <tr class="border-gray-300 ">
                             <td class="px-2 py-8 border-t border-b border-gray-300 text-lg ">
-                                <a href="/store/listofitems/{{ $sportItem->id }}">
                                     {{ $sportItem->name }}
-                                </a>
                             </td>
                             <td class="px-2 py-8 border-t border-b border-gray-300 text-lg">
-                                <a href="/store/listofitems/{{ $sportItem->id }}">
                                     {{ $sportItem->amount }}
-                                </a>
                             </td>
 
                             <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">

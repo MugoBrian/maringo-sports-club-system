@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('member_id');
+            $table->unsignedBigInteger('sporting_item_id');
             $table->foreign('member_id')->references('id')->on('members')->onDelete('set null');
-            $table->string('product_name');
+            $table->foreign('sporting_item_id')->references('id')->on('sport_items')->onDelete('set null');
             $table->integer('quantity');
             $table->decimal('price', 8, 2);
             $table->timestamps();

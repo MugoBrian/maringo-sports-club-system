@@ -10,7 +10,7 @@
         @include('partials._search')
         <div class="mb-4">
             <button class="h-12 w-40 text-white rounded-lg bg-red-500 hover:bg-red-600">
-                <a href="/members/register" class="text-white"> Register Member</a>
+                <a href="/members/register" class="text-white"> Register Member
             </button>
         </div>
         <div class="overflow-x-auto">
@@ -27,29 +27,24 @@
                         @foreach ($members as $member)
                             <tr class="border-gray-300">
                                 <td class="px-2 py-8 border-t border-b border-gray-300 text-lg">
-                                    <a href="/members/{{ $member->id }}">
                                         {{ $member->fullname }}
-                                    </a>
+                                    
                                 </td>
                                 <td class="px-2 py-8 border-t border-b border-gray-300 text-lg">
-                                    <a href="/members/{{ $member->id }}">
                                         {{ $member->gender }}
-                                    </a>
+                                    
                                 </td>
                                 <td class="px-2 py-8 border-t border-b border-gray-300 text-lg">
-                                    <a href="/members/{{ $member->id }}">
                                         {{ $member->membership_type->category }}
-                                    </a>
+                                    
                                 </td>
                                 <td class="px-2 py-8 border-t border-b border-gray-300 text-lg">
-                                    <a href="/members/{{ $member->id }}">
                                         {{ $member->dob }} years
-                                    </a>
+                                    
                                 </td>
                                 <td class="px-2 py-8 border-t border-b border-gray-300 text-lg">
-                                    <a href="/members/{{ $member->id }}">
                                         {{ $member->contact }}
-                                    </a>
+                                    
                                 </td>
                                 <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
                                     <a href="/members/{{ $member->id }}/edit"
