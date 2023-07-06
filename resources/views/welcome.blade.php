@@ -83,7 +83,7 @@
                             An Exclusive sports membership
                         </p>
                         <div>
-                            <a href="/user/login"
+                            <a href="/login"
                                 class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black">Login
                             </a>
                         </div>

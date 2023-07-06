@@ -8,6 +8,7 @@ use App\Http\Controllers\SportEventsController;
 use App\Http\Controllers\StockItemController;
 use App\Http\Controllers\UserController;
 use App\Models\LostItem;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,21 +29,19 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('admin.index');
 })->name('dashboard')->middleware('auth');
+ 
 
 
-
-
-
-Route::group(
-    [
-        'prefix' => '/user',
-    ],
-    function () {
-        Route::get('/login', [UserController::class, 'login'])->name('login');
-        Route::post('/authenticate', [UserController::class, 'authenticate'])->name('users.authenticate');
-        Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
-    }
-);
+// Route::group(
+//     [
+//         'prefix' => '/user',
+//     ],
+//     function () {
+//         Route::get('/login', [UserController::class, 'login'])->name('login');
+//         Route::post('/authenticate', [UserController::class, 'authenticate'])->name('users.authenticate');
+//         Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
+//     }
+// );
 
 // Members
 
@@ -212,3 +211,7 @@ Route::group(
         );
     }
 );
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

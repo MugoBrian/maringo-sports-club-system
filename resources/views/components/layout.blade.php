@@ -42,7 +42,7 @@
                 <li class="font-weight-bold text-uppercase text-primary">
                     </a>
                     <span class="font-bold uppercase">
-                        Welcome {{ auth()->user()->username }}
+                        Welcome {{ auth()->user()->name }}
                     </span>
                 </li>
                 <li>

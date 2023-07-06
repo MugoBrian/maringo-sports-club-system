@@ -20,10 +20,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        User::factory()->create([
-            'username' => 'admin',
-            'password' => 'admin',
-        ]);
+        // User::factory()->create([
+        //     'username' => 'admin',
+        //     'password' => 'admin',
+        // ]);
 
         // Game::factory(15)->create();
         $games = [
